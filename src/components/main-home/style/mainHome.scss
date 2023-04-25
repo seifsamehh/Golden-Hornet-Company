@@ -1,0 +1,50 @@
+//start global varibales
+$light: #f5f9fa;
+$dark: #1e1e1e;
+$main-color: #0f75bd;
+$secondary-color: #ffcc00;
+//end global varibales
+.main-home {
+  .left {
+    h3 {
+      margin-top: 1.5rem;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+    .home-part {
+      button:first-of-type {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        background-color: $secondary-color;
+        color: $dark;
+        box-shadow: 2px 2px $dark;
+      }
+    }
+  }
+  .right {
+    .main-box {
+      .top {
+        .programming {
+          box-shadow: 4px 4px $dark;
+        }
+      }
+      .bottom {
+        .left {
+          .marketing-box {
+            box-shadow: 4px 4px $dark;
+          }
+        }
+        .right {
+          .design-box,
+          .design-video {
+            box-shadow: 4px 4px $dark;
+          }
+        }
+      }
+    }
+  }
+}

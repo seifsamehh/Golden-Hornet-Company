@@ -1,0 +1,13 @@
+//start global varibales
+$dark: #1e1e1e;
+$secondary-color: #ffcc00;
+//end global varibales
+footer {
+  .react-bubbly-transitions__bubbly-link {
+    background-color: $secondary-color;
+    color: $dark;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+}

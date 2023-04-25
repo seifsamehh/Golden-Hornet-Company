@@ -1,0 +1,64 @@
+//start global varibales
+$light: #f5f9fa;
+$dark: #1e1e1e;
+$main-color: #0f75bd;
+$secondary-color: #ffcc00;
+//end global varibales
+.about {
+  .left {
+    position: relative;
+    img {
+      position: absolute;
+      top: -255px;
+      width: 500px;
+      height: 500px;
+      object-fit: contain;
+    }
+    .image1 {
+      width: 100%;
+      object-fit: cover;
+      z-index: 4;
+    }
+    .image2 {
+      z-index: 3;
+    }
+    .image3 {
+      z-index: 2;
+    }
+  }
+  .right {
+    position: relative;
+    z-index: 10;
+    h1 {
+      .special {
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 20%;
+          left: 0;
+          width: 90%;
+          height: 15px;
+          z-index: -1;
+          background-color: $secondary-color;
+        }
+      }
+    }
+    button {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: $dark;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid $main-color;
+      background: $secondary-color;
+      box-shadow: 3px 3px $main-color;
+    }
+
+    button:active {
+      box-shadow: none;
+      transform: translate(3px, 3px);
+    }
+  }
+}

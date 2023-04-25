@@ -1,0 +1,40 @@
+//start global varibales
+$light: #f5f9fa;
+$dark: #1e1e1e;
+$main-color: #0f75bd;
+$secondary-color: #ffcc00;
+//end global varibales
+.programming {
+  .left {
+    h3 {
+      margin-top: 1.5rem;
+    }
+    button {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+    }
+    .services-part {
+      button:first-of-type {
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        background-color: $secondary-color;
+        color: $dark;
+        box-shadow: 2px 2px $dark;
+      }
+    }
+  }
+  .right {
+    .services-box {
+      .box {
+        button {
+          box-shadow: 4px 4px $main-color;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

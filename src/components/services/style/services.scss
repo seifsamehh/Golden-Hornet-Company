@@ -1,0 +1,91 @@
+//start global varibales
+$light: #f5f9fa;
+$dark: #1e1e1e;
+$main-color: #0f75bd;
+$secondary-color: #ffcc00;
+//end global varibales
+.services {
+  background-image: url("../../../assets/Rectangle2.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+  @media screen and (max-width: 1280px) {
+    background-image: none;
+  }
+  h1 {
+    .special {
+      position: relative;
+      z-index: 1;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 20%;
+        left: 0;
+        width: 90%;
+        height: 15px;
+        z-index: -1;
+        background-color: $secondary-color;
+      }
+    }
+  }
+  .cards-lg {
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      width: 450px !important;
+      height: 450px !important;
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      box-shadow: 7px 15px $main-color;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .card {
+        .icon {
+          background-color: $secondary-color;
+          padding: 0.5rem;
+          box-shadow: 2px 2px $dark;
+          margin-bottom: 1rem;
+        }
+        h3,
+        p {
+          user-select: none;
+        }
+      }
+    }
+    .swiper-button-next {
+      left: 7%;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      top: 10%;
+      color: $dark;
+      background-color: $secondary-color;
+      box-shadow: 2px 2px 0 #1e1e1e;
+      &::after {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .cards-sm {
+    .card {
+      .icon {
+        background-color: $secondary-color;
+        padding: 0.5rem;
+        box-shadow: 2px 2px $dark;
+        margin-bottom: 1rem;
+      }
+      h3,
+      p {
+        user-select: none;
+      }
+    }
+  }
+}

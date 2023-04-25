@@ -1,0 +1,85 @@
+//start global varibales
+$light: #f5f9fa;
+$dark: #1e1e1e;
+$main-color: #0f75bd;
+$secondary-color: #ffcc00;
+//end global varibales
+.hero {
+  background-image: url("../../../assets/Vector1.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  .left {
+    position: relative;
+    z-index: 10;
+    h1 {
+      .special {
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 20%;
+          left: 0;
+          width: 90%;
+          height: 15px;
+          z-index: -1;
+          background-color: $secondary-color;
+        }
+      }
+    }
+    button {
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: $dark;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid $main-color;
+      background: $secondary-color;
+      box-shadow: 3px 3px $main-color;
+    }
+
+    button:active {
+      box-shadow: none;
+      transform: translate(3px, 3px);
+    }
+  }
+  .right {
+    .box {
+      position: relative;
+      img {
+        position: absolute;
+        top: -200px;
+        width: 500px;
+        height: 500px;
+        object-fit: contain;
+      }
+      .image1 {
+        z-index: 3;
+      }
+      .image2 {
+        top: -250px;
+        left: -20%;
+        z-index: 4;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+      .image3 {
+        z-index: 2;
+      }
+      .image4 {
+        z-index: 1;
+      }
+      .image5 {
+        width: 30%;
+        left: -60px;
+        top: -450px;
+        z-index: 4;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+    }
+  }
+}
