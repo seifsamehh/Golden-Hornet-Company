@@ -55,7 +55,7 @@ const Header = () => {
       {/* large screen */}
       <header className="landing-header flex min-[290px]:justify-center xl:justify-between items-center flex-wrap py-4 px-8 min-[290px]:hidden lg:flex gap-3">
         <div className="left">
-          <button onClick={handleClickScroll1}>
+          <button onClick={handleClickScroll1} className="logo-button">
             <svg
               width="230"
               height="88"
@@ -155,7 +155,7 @@ const Header = () => {
       >
         <div className="flex flex-wrap items-center justify-around w-full box">
           <div className="flex items-center gap-4 left">
-            <button onClick={handleClickScroll1}>
+            <button onClick={handleClickScroll1} className="logo-button">
               <svg
                 width="210"
                 height="88"

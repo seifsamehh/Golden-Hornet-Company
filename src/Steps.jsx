@@ -45,7 +45,7 @@ const steps = [
     content: "Explore Our Previous Work.",
   },
   {
-    selector: ".testimonials",
+    selector: ".text-boxs",
     content: "What Clients Said About Us.",
   },
   {
@@ -57,20 +57,8 @@ const steps = [
     content: "You Can Be Our Next Client To Improve Your Company.",
   },
   {
-    selector: ".login-btn",
-    content: "Login If You Already Have An Account.",
-  },
-  {
-    selector: ".login-btn-2",
-    content: "Login If You Already Have An Account.",
-  },
-  {
-    selector: ".signup-btn",
-    content: "SignUp If You Don't Have An Account.",
-  },
-  {
-    selector: ".signup-btn-2",
-    content: "SignUp If You Don't Have An Account.",
+    selector: ".logo-button",
+    content: "Click Here To Go To Hero Section Again.",
   },
 ];
 

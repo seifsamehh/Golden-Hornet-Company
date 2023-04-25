@@ -14,7 +14,7 @@ const Testimonials = () => {
           What Our Clients Are <span className="special">Saying</span>
         </h1>
       </Parallax>
-      <div className="boxs flex items-center gap-6 min-[290px]:flex-wrap md:flex-nowrap mx-6">
+      <div className="text-boxs boxs flex items-center gap-6 min-[290px]:flex-wrap md:flex-nowrap mx-6">
         <div className="box test-1 bg-white text-[#1e1e1e] dark:bg-[#0f75bd] dark:text-white p-4 rounded-2xl border-2 border-[#1e1e1e] border-solid">
           <svg
             width="88"
