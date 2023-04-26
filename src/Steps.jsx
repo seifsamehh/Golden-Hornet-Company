@@ -60,6 +60,10 @@ const steps = [
     selector: ".logo-button",
     content: "Click Here To Go To Hero Section Again.",
   },
+  {
+    selector: ".main-home",
+    content: "Welcome To Golden Hornet Home Page.",
+  },
 ];
 
 export default steps;

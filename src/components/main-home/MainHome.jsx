@@ -1,13 +1,15 @@
 import { BubblyLink } from "react-bubbly-transitions";
 import { Parallax } from "react-scroll-parallax";
+import { useTour } from "@reactour/tour";
 import marketing from "../../assets/marketing.png";
 import design from "../../assets/design.png";
 import "./style/mainHome.scss";
 
 const MainHome = () => {
+  const { setIsOpen } = useTour();
   return (
     <section className="main-home flex justify-center items-start min-[290px]:flex-wrap md:flex-nowrap gap-12 pb-6 min-[290px]:mx-4 md:mx-12">
-      <div className="left bg-[#0f75bd] text-white md:w-[450px] px-2 py-6 rounded-xl border-2 border-[#1e1e1e] dark:border-[#ffcc00] border-solid md:min-h-[91vh] flex min-[290px]:flex-row md:flex-col min-[290px]:flex-wrap md:flex-nowrap justify-start gap-6 min-[290px]:hidden md:block">
+      <div className="main-home-left left bg-[#0f75bd] text-white md:w-[450px] px-2 py-6 rounded-xl border-2 border-[#1e1e1e] dark:border-[#ffcc00] border-solid md:min-h-[91vh] flex min-[290px]:flex-row md:flex-col min-[290px]:flex-wrap md:flex-nowrap justify-start gap-6 min-[290px]:hidden md:block">
         <div className="flex flex-col items-start gap-2 home-part">
           <BubblyLink to="/home" colorStart="#0F75BD" colorEnd="#FFCC00">
             <svg
@@ -49,6 +51,18 @@ const MainHome = () => {
             </svg>
             Shopping Cart
           </BubblyLink>
+          <button onClick={() => setIsOpen(true)}>
+            <svg
+              width={30}
+              height={30}
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M5.52 4.92a1.8 1.8 0 0 1 1.8-1.8h1.2a1.8 1.8 0 0 1 1.8 1.8v3h2.4v-3a1.8 1.8 0 0 1 1.8-1.8h1.2a1.8 1.8 0 0 1 1.8 1.8v2.86a.6.6 0 0 0 .331.536l1.074.536a1.8 1.8 0 0 1 .995 1.61v8.86a1.8 1.8 0 0 1-1.8 1.8h-3.6a1.8 1.8 0 0 1-1.8-1.8v-3.6a.602.602 0 0 1 .175-.426l1.025-1.023v-.952a.6.6 0 0 0-.6-.6h-3.6a.6.6 0 0 0-.6.6v.952l1.025 1.023a.599.599 0 0 1 .175.425v3.6a1.8 1.8 0 0 1-1.8 1.8h-3.6a1.8 1.8 0 0 1-1.8-1.8v-8.858a1.8 1.8 0 0 1 .996-1.61l1.073-.537a.6.6 0 0 0 .331-.536V4.92Zm1.8-.6a.6.6 0 0 0-.6.6v.6h2.4v-.6a.6.6 0 0 0-.6-.6h-1.2Zm1.8 2.4h-2.4v1.06a1.8 1.8 0 0 1-.996 1.61l-1.073.536a.6.6 0 0 0-.33.537v7.058h4.8V15.97l-1.026-1.024a.6.6 0 0 1-.175-.425v-1.2a1.8 1.8 0 0 1 1.8-1.8h3.6a1.8 1.8 0 0 1 1.8 1.8v1.2a.6.6 0 0 1-.175.425L13.92 15.97v1.551h4.8v-7.058a.6.6 0 0 0-.331-.537l-1.074-.536a1.8 1.8 0 0 1-.995-1.61V6.72h-2.4v1.8a.6.6 0 0 1-.6.6h-3.6a.6.6 0 0 1-.6-.6v-1.8Zm4.8-1.2h2.4v-.6a.6.6 0 0 0-.6-.6h-1.2a.6.6 0 0 0-.6.6v.6Zm4.8 13.2h-4.8v.6a.6.6 0 0 0 .6.6h3.6a.6.6 0 0 0 .6-.6v-.6Zm-9.6 0h-4.8v.6a.6.6 0 0 0 .6.6h3.6a.6.6 0 0 0 .6-.6v-.6Z" />
+            </svg>
+            Take A Tour
+          </button>
         </div>
         <div className="flex flex-col items-start gap-2 services-part">
           <h3 className="text-2xl font-light text-slate-100">Services</h3>
@@ -202,10 +216,10 @@ const MainHome = () => {
           </BubblyLink>
         </div>
       </div>
-      <div className="right border-2 border-[#1e1e1e] dark:border-white border-solid p-4 min-h-full rounded-xl">
+      <div className="main-home-right right border-2 border-[#1e1e1e] dark:border-white border-solid p-4 min-h-full rounded-xl">
         <div className="main-box">
           <div className="top md:mb-6">
-            <div className="programming bg-[#FFF7D5] p-4 border-2 border-[#1e1e1e] dark:border-white border-solid rounded-lg flex justify-around items-center gap-6 min-[290px]:flex-wrap md:flex-nowrap">
+            <div className="programming programming-box bg-[#FFF7D5] p-4 border-2 border-[#1e1e1e] dark:border-white border-solid rounded-lg flex justify-around items-center gap-6 min-[290px]:flex-wrap md:flex-nowrap">
               <Parallax translateY={["50px", "-50px"]}>
                 <div className="left">
                   <svg
@@ -473,7 +487,7 @@ const MainHome = () => {
             </div>
           </div>
           <div className="bottom flex items-start min-[290px]:flex-wrap md:flex-nowrap gap-12">
-            <div className="left w-full">
+            <div className="w-full left">
               <div className="marketing-box bg-[#D5F5FF] p-4 border-2 border-[#1e1e1e] dark:border-white border-solid rounded-lg min-[290px]:mt-4 md:mt-0">
                 <Parallax translateY={["10px", "-50px"]}>
                   <img src={marketing} alt="marketing" />
@@ -508,7 +522,7 @@ const MainHome = () => {
                 </Parallax>
               </div>
             </div>
-            <div className="right w-full">
+            <div className="w-full right">
               <div className="design-box bg-[#FFD7D5] p-4 border-2 border-[#1e1e1e] dark:border-white border-solid rounded-lg flex justify-around items-center gap-6 min-[290px]:flex-wrap md:flex-nowrap md:mb-6">
                 <div className="right">
                   <Parallax translateY={["10px", "-50px"]}>
